@@ -1,0 +1,30 @@
+# João Pedro Bastos Fernandes
+
+### Verbo GET – listar todos
+GET http://localhost:8000/produto/ HTTP/1.1
+
+### Verbo GET – listar um
+GET http://localhost:8000/produto/10 HTTP/1.1
+
+### Verbo POST – adicionar
+POST http://127.0.0.1:8000/produto/ HTTP/1.1
+content-type: application/json
+
+{
+    "nome" : "Coxinha das Galáxias",
+    "descricao" : "Feito de Frango Espacial",
+    "valor_unitario" : 5.0
+}
+
+### Verbo PUT – atualiza
+PUT http://127.0.0.1:8000/produto/1 HTTP/1.1
+content-type: application/json
+
+{
+    "nome" : "Coxinha das Galáxias 2",
+    "descricao" : "Feito de Frango Espacial de Marte",
+    "valor_unitario" : 10.0
+}
+
+### Verbo DELETE - excluir
+DELETE http://127.0.0.1:8000/produto/1 HTTP/1.1

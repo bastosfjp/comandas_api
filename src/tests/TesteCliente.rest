@@ -1,0 +1,30 @@
+# João Pedro Bastos Fernandes
+
+### Verbo GET – listar todos
+GET http://localhost:8000/cliente/ HTTP/1.1
+
+### Verbo GET – listar um
+GET http://localhost:8000/cliente/1 HTTP/1.1
+
+### Verbo POST – adicionar
+POST http://127.0.0.1:8000/cliente/ HTTP/1.1
+content-type: application/json
+
+{
+    "nome" : "João Pedro Bastos Fernandes",
+    "cpf" : "10051205955",
+    "telefone" : "4991757242"
+}
+
+### Verbo PUT – atualiza
+PUT http://127.0.0.1:8000/cliente/1 HTTP/1.1
+content-type: application/json
+
+{
+    "nome" : "Bastos Eu",
+    "cpf" : "10051205955",
+    "telefone" : "4991757242"
+}
+
+### Verbo DELETE - excluir
+DELETE http://127.0.0.1:8000/cliente/1 HTTP/1.1
