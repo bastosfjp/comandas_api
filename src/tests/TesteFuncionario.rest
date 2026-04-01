@@ -9,9 +9,9 @@ POST http://127.0.0.1:8000/funcionario/ HTTP/1.1
 content-type: application/json
 
 {
-    "nome" : "João Pedro Bastos Fernandes",
-    "matricula" : "123456",
-    "cpf" : "1",
+    "nome" : "admin",
+    "matricula" : "admin123",
+    "cpf" : "123456",
     "telefone" : "49991757242",
     "grupo" : 1,
     "senha" : "teste@123"

@@ -217,3 +217,4 @@ pyvenv.cfg
 .idea
 .vscode
 comandas_db.db
+SeedBanco.rest

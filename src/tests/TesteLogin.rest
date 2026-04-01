@@ -1,0 +1,15 @@
+### Login para obter access e refresh tokens POST http://127.0.0.1:8000/auth/login HTTP/1.1 content-type: application/json
+
+{ "cpf" : "1515", "senha" : "zdb123" }
+
+### token gerado
+
+@access_token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiaWQiOjIsImdydXBvIjoyLCJleHAiOjE3NzQ4MTg4ODYsInR5cGUiOiJhY2Nlc3MifQ.59t9Wt_fcZPA_9OwZbsNazqwOoQ_p1k2upj7HpHB96s
+
+@refresh_token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiaWQiOjIsImdydXBvIjoyLCJleHAiOjE3NzU0MjI3ODYsInR5cGUiOiJyZWZyZXNoIn0.Lc-SF91U2ZuidrDgqMfc0FzJH2zPZX8SRe4ZrkVLQYg
+
+### testar access token para acessar endpoint protegido GET http://127.0.0.1:8000/auth/me HTTP/1.1 Authorization: Bearer {{access_token}}
+
+### Usar refresh token para obter novos tokens
+
+POST http://localhost:8000/auth/refresh Content-Type: application/json { "refresh_token": "{{refresh_token}}" }
