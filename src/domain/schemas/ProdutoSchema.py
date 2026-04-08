@@ -4,7 +4,7 @@ from typing import Optional
 class ProdutoCreate(BaseModel):
     nome: str
     descricao: str
-    foto: Optional[bytes] = None #DEIXAR OPICIONAL PQ TAVA DANDO ERRO
+    foto: bytes = None
     valor_unitario: float
 
 class ProdutoUpdate(BaseModel):
@@ -18,5 +18,11 @@ class ProdutoResponse(BaseModel):
     id: int
     nome: str
     descricao: str
-    foto: Optional[bytes] = None #MESMA COISA AQUI, TAVA DANDO ERRO COM A FOTO OBRIGADOTIROA
+    foto: bytes
     valor_unitario: float
+
+class ProdutoResponsePublico(BaseModel):
+    model_config = ConfigDict(from_attributes=True)
+    nome: str
+    descricao: str
+    foto: bytes

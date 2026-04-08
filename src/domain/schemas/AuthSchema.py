@@ -17,8 +17,8 @@ class RefreshTokenRequest(BaseModel):
 
 class TokenData(BaseModel):
     cpf: Optional[str] = None
-    
     id_funcionario: Optional[int] = None
+
 class FuncionarioAuth(BaseModel):
     model_config = ConfigDict(from_attributes=True)
     id: int
@@ -26,3 +26,18 @@ class FuncionarioAuth(BaseModel):
     matricula: str
     cpf: str
     grupo: int
+
+class ClienteAuth(BaseModel):
+    model_config = ConfigDict(from_attributes=True)
+    id: int
+    nome: str
+    cpf: str
+    telefone: str
+
+class ProdutoAuth(BaseModel):
+    model_config = ConfigDict(from_attributes=True)
+    id: int
+    nome: str
+    descricao: str
+    foto: bytes
+    valor_unitario: float
