@@ -192,3 +192,4 @@ async def logout(request: Request, current_user: FuncionarioAuth = Depends(get_c
     )
 
     return {"message": "Logout realizado com sucesso"}
+

@@ -218,3 +218,4 @@ pyvenv.cfg
 .vscode
 comandas_db.db
 SeedBanco.rest
+cert/

@@ -5,6 +5,10 @@ from sqlalchemy.ext.asyncio import create_async_engine, AsyncSession, async_sess
 from settings import STR_DATABASE, ASYNC_STR_DATABASE
 from sqlalchemy.orm import Session
 
+
+print(">>> STR_DATABASE:", STR_DATABASE)
+print(">>> ASYNC_STR_DATABASE:", ASYNC_STR_DATABASE)
+
 # cria o engine síncrono do banco de dados (mantido para compatibilidade)
 engine = create_engine(STR_DATABASE, echo=True)
 
@@ -43,3 +47,5 @@ async def get_async_db():
            yield session
         finally:
             await session.close()
+
+            print("DATABASE:", STR_DATABASE)
